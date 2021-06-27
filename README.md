@@ -1,2 +1,2 @@
-# CustomerPropensityModeling
+# Customer Propensity Modeling
 Binary classification modeling of customer likelihood of subscription to a product offering.
