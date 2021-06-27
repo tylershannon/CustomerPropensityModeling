@@ -43,4 +43,17 @@ graphviz==0.16
 6. Split into training and testing, holding 20% of the dataset for testing.
 
 ### Feature Selection
-I used a decision tree to assist with feature selection. 
+I used a decision tree to assist with feature selection. I trained both a single decision tree and a random forest model. Specs are below for each:
+
+#### Single Decision Tree Parameters
+1. Critereon: entropy
+2. Max Depth: 4
+3. Random State: 40
+
+#### Random Forest Parameters
+1. Critereon: entropy
+2. Max Depth: 4
+3. Random State: 40
+4. Number of Estimators: 100
+
+
