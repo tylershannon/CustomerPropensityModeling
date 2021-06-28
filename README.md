@@ -78,3 +78,24 @@ Here we can see that the random forest model performs slightly better, but not b
 * It appears that spring and fall are better times for subscription conversions.
 
 With these results from the decision tree suggesting some important features, I'll use those features to build a logistic regression classification algorithm
+
+### Logistic Regression
+
+For the logistic regression model, I am only using the following independant variables based on our decision tree results:
+1. poutcome_success
+2. housing_yes
+3. marital_married
+4. balance
+
+#### Logistic Regression Parameters
+1. max_iterations = 2000
+2. random_state = 40
+
+#### Model Performace
+Below is a graph that shows the AUC ROC for all three models (LR, DT, and RF)
+
+![All Models Performance](https://github.com/tylershannon/CustomerPropensityModeling/blob/main/images/AllModels_AUC_ROC.png)
+
+![Logistic Regression Confussion Matrix](https://github.com/tylershannon/CustomerPropensityModeling/blob/main/images/AllModels_ConfussionMatrix.png)
+
+Using features determined as importatnt from decision tree, the LR model outperforms both the decision tree and random forest based on the AUC ROC metric. In future steps, we'll build a pipline for the LR model moving forward and recommend to the client that we use the Logistic Regression Algorithm.
