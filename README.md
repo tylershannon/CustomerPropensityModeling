@@ -56,4 +56,6 @@ I used a decision tree to assist with feature selection. I trained both a single
 3. Random State: 40
 4. Number of Estimators: 100
 
-
+#### Model Performance
+![DT and RF AUC ROC]
+(https://github.com/tylershannon/CustomerPropensityModeling/blob/main/images/AUC_ROC_dt_rf.png)
