@@ -36,7 +36,7 @@ graphviz==0.16
 ### Data Pre-Processing Methodology
 
 1. Convert target class from strings to binary (0/1)
-2. Complete a random oversampling of the data so that there are equal counts of each target class
+2. Complete a random oversampling of the data so that there are equal counts of each target class. Note: this will result in overfitting.
 3. Feature engineering of 'Jobs' variable. There are 12 different jobs in the dataset, these can be compressed into 10 job types.
 4. Drop 'Duration' variable from the dataset. This is recommended in the data documenation.
 5. One-hot-encode the categorical variables and drop one of each of the binary variables.
@@ -58,3 +58,23 @@ I used a decision tree to assist with feature selection. I trained both a single
 
 #### Model Performance
 ![test](https://github.com/tylershannon/CustomerPropensityModeling/blob/main/images/AUC_ROC_dt_rf.png?raw=true)
+
+Here we can see that the random forest model performs slightly better, but not by much. We'll use the single decision tree to explore the feature importances.
+
+#### Feature Importance
+1. poutcome_success	0.493724
+2. contact_unknown	0.265159
+3. housing_yes	0.111819
+4. month_aug	0.066816
+5. month_mar	0.023784
+6. month_oct	0.015026
+7. marital_married	0.011819
+8. day_18	0.002834
+9. balance	0.002188
+10. pdays	0.001697
+
+* The success of previous marketing initiative is a good inidicator as to whether someone will subscribe. Our tree is telling us that if there is a past success, the customer is more likely to subscribe. In a business context this suggests that marketers should place high value on existing contacts to help drive future subscriptions.
+* It also appears that age, house loan status, marital status and bank account balance are other good indicators of subscriptions.
+* It appears that spring and fall are better times for subscription conversions.
+
+With these results from the decision tree suggesting some important features, I'll use those features to build a logistic regression classification algorithm
