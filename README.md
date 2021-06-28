@@ -19,15 +19,15 @@ Note: This dataset contains the outcome variable (y) but you are not limited to 
 for this project
 
 ### Versioning and Packages
-This data preprocessing done makes use of some helper funcions found in the ixis.py file.
+The data preprocessing makes use of some helper funcions found in the ixis.py file.
 Below are the packages used and their versions:
-seaborn==0.10.0
-scikit-learn==0.22.1
-pydotplus==2.0.2
-pandas==1.2.3
-numpy==1.20.1
-matplotlib==3.3.4
-graphviz==0.16
+* seaborn==0.10.0
+* scikit-learn==0.22.1
+* pydotplus==2.0.2
+* pandas==1.2.3
+* numpy==1.20.1
+* matplotlib==3.3.4
+* graphviz==0.16
 
 ### EDA Summary
 * Data contains a mix of continuous and categorical variables. One-hot-encoding will be needed.
