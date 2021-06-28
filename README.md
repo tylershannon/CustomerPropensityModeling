@@ -57,4 +57,5 @@ I used a decision tree to assist with feature selection. I trained both a single
 4. Number of Estimators: 100
 
 #### Model Performance
-Image(https://github.com/tylershannon/CustomerPropensityModeling/blob/main/images/AUC_ROC_dt_rf.png?raw=true)
+![test]
+(https://github.com/tylershannon/CustomerPropensityModeling/blob/main/images/AUC_ROC_dt_rf.png?raw=true)
